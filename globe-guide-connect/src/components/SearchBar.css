@@ -1,0 +1,39 @@
+.hero-section {
+  background-color: #e0e0e0; /* Light grey background */
+  padding: 80px 0; /* Top and bottom padding */
+}
+
+.hero-section .container {
+  max-width: 1200px; /* Maximum width for the container */
+  padding: 0 15px; /* Add padding inside the container */
+}
+
+.hero-section .display-4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-section .input-group {
+  max-width: 400px; /* Maximum width for the search bar */
+}
+
+.hero-section .image-placeholder {
+  width: 100%;
+  height: auto; /* Adjust height to be auto */
+  background-color: #cccccc; /* Placeholder background color */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure the image fits within the border radius */
+}
+
+.hero-section .image-placeholder img {
+  width: 100%;
+  height: auto; /* Ensure the image maintains its aspect ratio */
+  border-radius: 8px; /* Apply rounded corners to the image */
+}
+
+@media (max-width: 768px) {
+  .hero-section .display-4 {
+    font-size: 2rem;
+  }
+}
