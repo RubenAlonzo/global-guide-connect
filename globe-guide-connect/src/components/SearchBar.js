@@ -6,13 +6,11 @@ const SearchBar = () => {
     <section className="hero-section d-flex align-items-center">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-6">
+          <div className="col-md-6 pe-5">
             <h1 className="display-4">Explore amazing places with the best guides</h1>
-            <div className="input-group mt-4">
-              <input type="text" className="form-control" placeholder="Places" />
-              <div className="input-group-append">
-                <button className="btn btn-primary" type="button">Search</button>
-              </div>
+            <div className="d-flex mt-4">
+              <input type="text" className="form-control me-2" placeholder="Places" />
+              <button className="btn btn-primary" type="button">Search</button>
             </div>
           </div>
           <div className="col-md-6">

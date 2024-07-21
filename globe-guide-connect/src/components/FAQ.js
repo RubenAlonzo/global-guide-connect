@@ -1,6 +1,5 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
 import './FAQ.css';
 
 const faqs = [
@@ -30,7 +29,7 @@ const FAQ = () => {
         <Accordion defaultActiveKey="0">
           {faqs.map((faq, index) => (
             <Accordion.Item eventKey={index.toString()} key={index}>
-              <Accordion.Header>{faq.question}</Accordion.Header>
+              <Accordion.Header style={{ fontWeight: 'bold !important'}}>{faq.question}</Accordion.Header>
               <Accordion.Body>
                 {faq.answer}
               </Accordion.Body>

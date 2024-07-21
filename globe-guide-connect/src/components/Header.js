@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="py-3">
+    <header className="py-2 bg-white sticky-top shadow-sm">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
           <h1 className="logo">GG Connect</h1>

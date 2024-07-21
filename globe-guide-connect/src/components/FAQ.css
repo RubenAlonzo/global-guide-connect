@@ -12,3 +12,10 @@
   text-decoration: none;
   color: #0056b3;
 }
+
+/* Override Bootstrap CSS */
+.accordion-button {
+  font-weight: bold;
+  border-top-left-radius: var(--bs-accordion-inner-border-radius);
+  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+}
