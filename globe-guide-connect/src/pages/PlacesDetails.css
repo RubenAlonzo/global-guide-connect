@@ -1,0 +1,14 @@
+.big-image {
+    max-width: 600px;
+    max-height: 400px;
+    left: 0px;
+    top: 144px;
+
+    border-radius: 20px;
+}
+.small-image {
+    max-width: 400px;
+    max-height: 200px;
+    border-radius: 20px;
+    
+}
