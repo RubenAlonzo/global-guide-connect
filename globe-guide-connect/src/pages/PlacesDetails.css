@@ -1,4 +1,4 @@
-.big-image {
+/* .big-image {
     max-width: 600px;
     max-height: 400px;
     left: 0px;
@@ -11,4 +11,17 @@
     max-height: 200px;
     border-radius: 20px;
     
+} */
+
+.large-image {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.small-image {
+    width: 100%;
+    margin-bottom: 2.8rem;
+    background-size: cover;
+    background-position: center;
 }
