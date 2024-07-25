@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const guides = [
   {
@@ -38,7 +40,9 @@ const PopularGuides = () => {
               <div className="card">
                 <img src={`https://xsgames.co/randomusers/assets/avatars/${guide.gender}/${guide.id}.jpg`} className="card-img-top" alt={guide.fullName} />
                 <div className="card-body">
+                  <Link to={"/guide-details/"+guide.id}>
                   <h5 className="card-title">{guide.fullName}</h5>
+                  </Link>
                   <p className="card-text"><strong>Price:</strong> ${guide.costPerHour}/per hour per person</p>
                   <p className="card-text mb-1">Location: {guide.location}</p>
                   <p className="card-text">Languages: {guide.languages.join(', ')}</p>

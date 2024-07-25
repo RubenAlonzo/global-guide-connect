@@ -1,0 +1,12 @@
+.large-image {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.small-image {
+    width: 100%;
+    margin-bottom: 2.8rem;
+    background-size: cover;
+    background-position: center;
+}
