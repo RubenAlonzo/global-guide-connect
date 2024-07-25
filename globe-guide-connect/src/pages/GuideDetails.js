@@ -77,7 +77,7 @@ const GuideDetails = () => {
             {guideData.filter(data => data.id === guideId).map(guide => (
                 <div className="container-fluid ">
                     <div className="row gx-5">
-                        <div className="col-lg-7 mb-4">
+                        <div className="col-lg-7 mb-5">
                             <img className="large-image rounded-circle" src={`https://xsgames.co/randomusers/assets/avatars/${guide.gender}/${guide.id}.jpg`} alt=""/>
                         </div>
                         <div className="col-lg-5" >
