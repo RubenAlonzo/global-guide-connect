@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Home from './pages/Home';
 import PlacesDetails from './pages/PlacesDetails';
 import Header from './components/Header';
+import GuideDetails from './pages/GuideDetails';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<Navigate to="/home" />} />
           <Route path="/place-details/:placeId" element={<PlacesDetails/>}/>
+          <Route path='/guide-details/:guideId' element={<GuideDetails/>}/>
         </Routes>
     </Router>
   );
