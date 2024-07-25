@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import HowItWorks from '../components/HowItWorks';
 import PopularPlaces from '../components/PopularPlaces';
@@ -9,7 +8,6 @@ import FAQ from '../components/FAQ';
 const Home = () => {
   return (
     <div>
-      <Header />
       <SearchBar />
       <HowItWorks />
       <PopularPlaces />
