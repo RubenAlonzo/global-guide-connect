@@ -35,20 +35,20 @@ const guideData = [
 ];
 const faqs = [
     {
-      question: "What's Included?",
-      answer: "Our tour includes skip-the-line entry and a guided visit."
+      question: "Why you should choose me",
+      answer: "I will make an effort for you to have an amazing experience"
     },
     {
-      question: "What should I bring?",
-      answer: "Bring a valid ID, comfortable shoes, and a camera. Don’t forget a light jacket in case it’s chilly!"
+      question: "Where will we meet?",
+      answer: "All the information will be shared on the WhatsApp group chat"
     },
     {
-      question: "How's the weather?",
-      answer: "Weather can vary, so check the forecast before you go."
+      question: "How long does it take?",
+      answer: "Depending of the day and the quantity of people, it will take between 2 or 3 hours"
     },
     {
-      question: "Can I get in a vehicle?",
-      answer: "It is recommended to come either by taxi or public trasport, please check with your guide for any vehicle permisions."
+      question: "Any additional information?",
+      answer: "Please ask all your questions on the WhatsApp group!"
     }
   ];
 
