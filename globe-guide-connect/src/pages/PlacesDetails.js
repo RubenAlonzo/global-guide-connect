@@ -15,6 +15,17 @@ const placeData = [
         imageUrl: "https://www.travelandleisure.com/thmb/SPUPzO88ZXq6P4Sm4mC5Xuinoik=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/eiffel-tower-paris-france-EIFFEL0217-6ccc3553e98946f18c893018d5b42bde.jpg",
         imgURL1: "https://i.natgeofe.com/k/6d4021bf-832e-49f6-b898-27b7fcd7cbf7/eiffel-tower-ground-up_2x1.jpg",
         imgURL2: "https://res.klook.com/image/upload/c_fill,w_750,h_500/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/t3f9zjjeu2nebhdcmaka.jpg"
+      },
+      {
+        id: "2",
+        country: "Italy",
+        placeName: "Colisseum",
+        rating: 3,
+        description: "Locally nicknamed \"La dame de fer\" (French for \"Iron Lady\"), it was constructed as the centerpiece of the 1889 World's Fair, and to crown the centennial anniversary of the French Revolution. Although initially criticised by some of France's leading artists and intellectuals for its design, it has since become a global cultural icon of France and one of the most recognisable structures in the world.",
+        experience: "Visiting the Eiffel Tower is an unforgettable experience that immerses you in the heart of Parisian culture and history. As you approach this iconic structure, you'll be struck by its sheer magnitude and intricate iron lattice design. The anticipation builds as you ascend, whether by elevator or the more adventurous route of climbing the stairs. From the various observation decks, you'll be treated to breathtaking panoramic views of Paris, including famous landmarks like the Seine River, the Louvre, and Notre-Dame Cathedral. The atmosphere is filled with a sense of wonder and romance, especially if you visit in the evening when the tower sparkles with thousands of twinkling lights. The experience is often complemented by the delightful sounds of street musicians and the enticing aromas from nearby cafés, making a visit to the Eiffel Tower a feast for the senses and a cherished memory for a lifetime.",
+        imageUrl: "https://www.travelandleisure.com/thmb/SPUPzO88ZXq6P4Sm4mC5Xuinoik=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/eiffel-tower-paris-france-EIFFEL0217-6ccc3553e98946f18c893018d5b42bde.jpg",
+        imgURL1: "https://i.natgeofe.com/k/6d4021bf-832e-49f6-b898-27b7fcd7cbf7/eiffel-tower-ground-up_2x1.jpg",
+        imgURL2: "https://res.klook.com/image/upload/c_fill,w_750,h_500/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/t3f9zjjeu2nebhdcmaka.jpg"
       }
 ];
 const faqs = [
