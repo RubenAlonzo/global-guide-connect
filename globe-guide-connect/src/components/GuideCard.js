@@ -5,7 +5,7 @@ import { FaGlobe, FaEdit, FaTrash } from 'react-icons/fa';
 const GuideCard = ({ guide }) => {
   return (
     <Card className="position-relative rounded-3 shadow-sm">
-      <Card.Img variant="top" src={guide.image} style={{ height: '150px', objectFit: 'cover' }} alt={`${guide.name} image`} />
+      <Card.Img variant="top" src={`https://xsgames.co/randomusers/assets/avatars/${guide.gender}/${guide.id}.jpg`} style={{ height: '150px', objectFit: 'cover' }} alt={`${guide.name} image`} />
       <Card.Body>
         <div className="d-flex justify-content-between align-items-center mb-2">
           <Card.Title><strong>{guide.name}</strong></Card.Title>
