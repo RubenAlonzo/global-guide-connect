@@ -52,10 +52,6 @@ function App() {
                     </div>
                 </section>
 
-                <section className="text-center my-4">
-                <CustomButton text="Load More"/>
-                </section>
-
                 <section className="my-5">
                     <h1>You may also like our Guides</h1>
                 </section>
@@ -63,7 +59,7 @@ function App() {
                 <section>
                     <div className="row">
                         {guidesData.slice(0, 4).map((guide) => (
-                            <Col md={3} className="mb-4" key={guide.id}>
+                            <Col md={4} className="mb-4" key={guide.id}>
                                 <GuideCard guide={guide} />
                             </Col>
                         ))}

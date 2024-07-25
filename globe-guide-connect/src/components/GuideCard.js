@@ -4,16 +4,12 @@ import { FaGlobe, FaEdit, FaTrash } from 'react-icons/fa';
 
 const GuideCard = ({ guide }) => {
   return (
-    <Card className="text-center rounded-3 shadow-sm">
+    <Card className="position-relative rounded-3 shadow-sm">
       <Card.Img variant="top" src={guide.image} style={{ height: '150px', objectFit: 'cover' }} alt={`${guide.name} image`} />
       <Card.Body>
-        <Card.Title><strong>{guide.name}</strong></Card.Title>
-        <Card.Text>Price: ${guide.price} /hour</Card.Text>
-        <Card.Text className="d-flex align-items-center justify-content-center">
-          <FaGlobe className="me-2" />
-          {guide.languages.join(', ')}
-        </Card.Text>
-        <div className="position-absolute top-0 end-0 m-2 d-flex">
+        <div className="d-flex justify-content-between align-items-center mb-2">
+          <Card.Title><strong>{guide.name}</strong></Card.Title>
+          <div className="position-absolute end-0 m-2 d-flex">
             <Button
               variant="outline-warning"
               className="d-flex align-items-center justify-content-center me-2 rounded-circle"
@@ -29,6 +25,12 @@ const GuideCard = ({ guide }) => {
               <FaTrash />
             </Button>
           </div>
+        </div>
+        <Card.Text>Price: ${guide.price} /hour</Card.Text>
+        <Card.Text className="d-flex align-items-center">
+          <FaGlobe className="me-2" />
+          {guide.languages.join(', ')}
+        </Card.Text>
       </Card.Body>
     </Card>
   );
