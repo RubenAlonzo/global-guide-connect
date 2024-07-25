@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Col, Button, Form } from 'react-bootstrap';
+import { Container, Col, Form } from 'react-bootstrap';
 import PlaceCard from '../components/PlaceCard';
 import GuideCard from '../components/GuideCard';
 import Header from '../components/Header';
