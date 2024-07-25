@@ -78,7 +78,7 @@ const GuideDetails = () => {
                 <div className="container-fluid ">
                     <div className="row gx-5">
                         <div className="col-lg-7 mb-5">
-                            <img className="large-image rounded-circle" src={`https://xsgames.co/randomusers/assets/avatars/${guide.gender}/${guide.id}.jpg`} alt=""/>
+                            <img className="large-avatar rounded-circle" src={`https://xsgames.co/randomusers/assets/avatars/${guide.gender}/${guide.id}.jpg`} alt=""/>
                         </div>
                         <div className="col-lg-5" >
                         <form className="bg-body-secondary p-4 ms-3 rounded-2">
