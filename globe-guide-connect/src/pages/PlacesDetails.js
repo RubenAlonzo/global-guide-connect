@@ -83,15 +83,15 @@ const PlacesDetails = () => {
             {placeData.filter(data => data.id === placeId).map(place => (
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-lg-8 mb-4">
+                        <div className="col-lg-7">
                             <img className="large-image rounded" src={place.imageUrl} alt=""/>
                         </div>
-                        <div className="col-lg-4 mb-4">
-                            <img className="small-image rounded" src={place.imgURL1} alt=""/>
-                            <img className="small-image rounded mb-1" src={place.imgURL2} alt=""/>
+                        <div className="col-lg-4">
+                            <img className="small-image rounded mb-3" src={place.imgURL1} alt=""/>
+                            <img className="small-image rounded" src={place.imgURL2} alt=""/>
                         </div>
                     </div>
-                    <div className="d-flex justify-content-between w-50">
+                    <div className="d-flex justify-content-between w-50 mt-5">
                         <div className="align-self-start">
                             <p className="h1">{place.placeName}</p>
                             <p className="h1">{Stars(place.rating)}</p>

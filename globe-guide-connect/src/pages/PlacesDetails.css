@@ -1,12 +1,14 @@
 .large-image {
+    max-width: 647px;
+    max-height: 435px;
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+
 }
 
 .small-image {
+    max-width: 380px;
+    max-height: 208px;
     width: 100%;
-    margin-bottom: 2.8rem;
-    background-size: cover;
-    background-position: center;
+
 }
