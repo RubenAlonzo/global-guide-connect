@@ -3,16 +3,20 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const allEntries = Object.entries(localStorage);
-  let email;
-  allEntries.forEach((entry) => {
-        if (entry) {
-          const loggedInUser = JSON.parse(entry[1]).isLoggedIn;
-          if (loggedInUser) {
+  let email = null;
+  if (allEntries.length) {
+    allEntries.forEach((entry) => {
+        try {
+          const userData = JSON.parse(entry[1]);
+          if (userData.isLoggedIn) {
             email = entry[0];
           }
+        } catch {
+          email = null;
         }
-      });
-  const isLoggedIn = JSON.parse(localStorage.getItem(email))?.isLoggedIn;
+    });
+  }
+  const isLoggedIn = email ? JSON.parse(localStorage.getItem(email))?.isLoggedIn : false;
   const navigate = useNavigate(); 
 
   const handleLogout = () => {
