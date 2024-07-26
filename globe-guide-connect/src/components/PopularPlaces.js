@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 // Source for places images: https://commons.wikimedia.org/wiki/Main_Page
@@ -28,6 +29,13 @@ const places = [
 ];
 
 const PopularPlaces = () => {
+
+  const navigate = useNavigate();
+
+  const ShowAllPlaces = () => {
+    navigate('/places');
+  };
+
   return (
     <section className="popular-places py-5 bg-light">
       <div className="container">
@@ -49,7 +57,7 @@ const PopularPlaces = () => {
           ))}
         </div>
         <div className="text-center mt-4">
-          <button className="btn btn-dark">Show All Places</button>
+          <button className="btn btn-dark" onClick={ShowAllPlaces}>Show All Places</button>
         </div>
       </div>
     </section>

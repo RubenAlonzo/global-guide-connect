@@ -1,0 +1,35 @@
+#hero-section {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Paisajes_en_Brasil_%288787755536%29.jpg/640px-Paisajes_en_Brasil_%288787755536%29.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 400px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#hero-section:hover {
+    cursor: pointer;
+    background-color: #e9ecef;
+    transform: scale(1.02);
+}
+
+#hero-section h1 {
+    transition: color 0.5s ease;
+}
+
+#hero-section:hover h1 {
+    color: #8bd48a;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
