@@ -11,7 +11,7 @@ const Home = () => {
       <SearchBar />
       <HowItWorks />
       <PopularPlaces />
-      <PopularGuides />
+      <PopularGuides customText={'Most Popular Guides'}/>
       <FAQ />
     </div>
   );

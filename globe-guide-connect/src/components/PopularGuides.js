@@ -29,11 +29,11 @@ const guides = [
   }
 ];
 
-const PopularGuides = () => {
+const PopularGuides = ({ customText, customStyle }) => {
   return (
     <section className="popular-guides py-5">
       <div className="container">
-        <h2 className="text-center">Most Popular Guides</h2>
+        <h2 className="text-center" style={customStyle}>{customText}</h2>
         <div className="row mt-4">
           {guides.map(guide => (
             <div className="col-md-4" key={guide.id}>

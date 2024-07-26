@@ -109,28 +109,5 @@ const placesData = [
     }
 ];
 
-const guidesData = [
-    {
-        id: 1,
-        name: 'John Doe',
-        gender: "male",
-        price: 50,
-        languages: ['English', 'Spanish']
-    },
-    {
-        id: 2,
-        name: 'Jane Smith',
-        gender: "female",
-        price: 60,
-        languages: ['English', 'French']
-    },
-    {
-        id: 3,
-        name: 'Luca Rossi',
-        gender: "male",
-        price: 55,
-        languages: ['Italian', 'English']
-    }
-];
 
-export { placesData, guidesData };
+export { placesData };
