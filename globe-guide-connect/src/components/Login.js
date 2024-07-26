@@ -1,42 +1,37 @@
 import React, { useState } from "react";
-import "./RegisterLoginForm.css"; // Import the CSS file
-import { useNavigate } from "react-router-dom"; // Import useHistory for redirection
+import "./RegisterLoginForm.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); 
 
-    // Check if user exists in LocalStorage
     const userData = localStorage.getItem(email);
     if (!userData) {
       setErrorMessage("This email does not exist");
       setTimeout(() => {
-        setErrorMessage(""); // Clear any previous error messages
+        setErrorMessage("");
       }, 3000);
-      return; // Exit if email is not found
+      return;
     }
 
-    // Parse the user data
     const user = JSON.parse(userData);
 
-    // Check if the password is correct
     if (user.password !== password) {
       setErrorMessage("Incorrect password");
       setTimeout(() => {
-        setErrorMessage(""); // Clear any previous error messages
+        setErrorMessage("");
       }, 3000);
-      return; // Exit if password is incorrect
+      return; 
     }
 
-    // If both email and password are valid
-    user.isLoggedIn = true; // Update the user's logged-in status
-    localStorage.setItem(email, JSON.stringify(user)); // Save updated user data
-     // Set isLoggedIn to false for other existing users
+    user.isLoggedIn = true; 
+    localStorage.setItem(email, JSON.stringify(user)); 
      const allKeys = Object.keys(localStorage);
      allKeys.forEach((key) => {
        if (key !== email) {
@@ -47,8 +42,8 @@ const Login = () => {
          }
        }
      });
-    setErrorMessage(""); // Clear any previous error messages
-    navigate("/home"); // Redirect to the dashboard or desired route
+    setErrorMessage(""); 
+    navigate("/home");
   };
 
   return (

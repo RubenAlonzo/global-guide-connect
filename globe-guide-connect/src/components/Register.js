@@ -1,25 +1,23 @@
 import React, { useState } from "react";
-import "./RegisterLoginForm.css"; // Import the CSS file
-import { useNavigate } from "react-router-dom"; // Import useHistory for redirection
+import "./RegisterLoginForm.css";
+import { useNavigate } from "react-router-dom"; 
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); 
 
-    // Check if the email already exists in LocalStorage
     const existingUser = localStorage.getItem(email);
     if (existingUser) {
       setErrorMessage("This email is already registered");
       setTimeout(() => {
-        setErrorMessage(""); // Clear any previous error messages
+        setErrorMessage("");
       }, 3000);
     } else {
-      // Set isLoggedIn to false for other existing users
       const allKeys = Object.keys(localStorage);
       allKeys.forEach((key) => {
         if (key !== email) {
@@ -30,7 +28,7 @@ const Register = () => {
           }
         }
       });
-      // Store the new user's email and password in LocalStorage
+      
       const userData = {
         email,
         password,
@@ -38,7 +36,6 @@ const Register = () => {
       };
       localStorage.setItem(email, JSON.stringify(userData));
 
-      // Navigate to the home page
       navigate("/home");
     }
   };
@@ -84,31 +81,3 @@ const Register = () => {
 };
 
 export default Register;
-
-/*
-
-const RegisterForm = () => {
-  return (
-    <div class="container">
-        <h1 className="display-4">Register and be a guide</h1>
-
-        <div class="register-form">
-            <form className="form-border">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Value" required/>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Value" required/>
-                </div>
-                <button type="submit" class="btn btn-register">Register</button>
-            </form>
-        </div>
-    </div>
-  );
-};
-
-export default RegisterForm;
-
-*/
