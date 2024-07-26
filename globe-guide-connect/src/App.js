@@ -5,6 +5,9 @@ import Places from './pages/Places'
 import PlacesDetails from './pages/PlacesDetails';
 import Header from './components/Header';
 import GuideDetails from './pages/GuideDetails';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
   return (
@@ -16,6 +19,8 @@ const App = () => {
           <Route path="/places" element={<Places />} />
           <Route path="/place-details/:placeId" element={<PlacesDetails/>}/>
           <Route path='/guide-details/:guideId' element={<GuideDetails/>}/>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
     </Router>
   );
