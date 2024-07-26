@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Home from './pages/Home';
 import FormPlaces from './pages/FormPlaces';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProfileForm from './pages/profileForm';
 
 const App = () => {
   return (
@@ -12,6 +13,8 @@ const App = () => {
         <Route path="*" element={<Navigate to="/home" />} />
         <Route path="/places-form" element={<FormPlaces />} />
         <Route path="*" element={<Navigate to="/places-form" />} />
+        <Route path="/profile-form" element={<ProfileForm />} />
+        <Route path="*" element={<Navigate to="/profile-form" />} />
       </Routes>
     </Router>
   );
