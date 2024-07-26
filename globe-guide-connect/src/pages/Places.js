@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Col, Form } from 'react-bootstrap';
 import PlaceCard from '../components/PlaceCard';
-import GuideCard from '../components/GuideCard';
 import '../components/Guides.css';
-import { placesData, guidesData } from '../components/PlaceData';
+import { placesData } from '../components/PlaceData';
 import CustomButton from '../components/CustomButton';
 import PopularGuides from '../components/PopularGuides';
 
