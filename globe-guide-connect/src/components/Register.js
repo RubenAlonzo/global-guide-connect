@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./RegisterLoginForm.css";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -9,35 +9,37 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    const existingUser = localStorage.getItem(email);
-    if (existingUser) {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const findUser = users.find((user) => user.email === email);
+
+    if (findUser) {
       setErrorMessage("This email is already registered");
       setTimeout(() => {
         setErrorMessage("");
-      }, 3000);
-    } else {
-      const allKeys = Object.keys(localStorage);
-      allKeys.forEach((key) => {
-        if (key !== email) {
-          const otherUser = JSON.parse(localStorage.getItem(key));
-          if (otherUser) {
-            otherUser.isLoggedIn = false;
-            localStorage.setItem(key, JSON.stringify(otherUser));
-          }
-        }
-      });
-      
-      const userData = {
-        email,
-        password,
-        isLoggedIn: true,
-      };
-      localStorage.setItem(email, JSON.stringify(userData));
-
-      navigate("/home");
+      }, 3000);     
+       return;
     }
+    
+    users.forEach((user) => {
+      if (user.email !== email) {
+        user.isLoggedIn = false;
+      }
+    });
+
+    const userData = {
+      email,
+      password,
+      isLoggedIn: true,
+    };
+    
+    users.push(userData);
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    navigate("/home");
   };
 
   return (

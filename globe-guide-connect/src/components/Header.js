@@ -2,29 +2,30 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const allEntries = Object.entries(localStorage);
-  let email = null;
-  if (allEntries.length) {
-    allEntries.forEach((entry) => {
-        try {
-          const userData = JSON.parse(entry[1]);
-          if (userData.isLoggedIn) {
-            email = entry[0];
-          }
-        } catch {
-          email = null;
-        }
-    });
-  }
-  const isLoggedIn = email ? JSON.parse(localStorage.getItem(email))?.isLoggedIn : false;
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  let isLoggedIn = false;
+  let currentUserEmail = null;
+
+  users.forEach(user => {
+    if (user.isLoggedIn) {
+      isLoggedIn = true;
+      currentUserEmail = user.email;
+    }
+  });
+
   const navigate = useNavigate(); 
 
   const handleLogout = () => {
 
-    const currentUser = JSON.parse(localStorage.getItem(email));
-    if (currentUser) {
-      currentUser.isLoggedIn = false;
-      localStorage.setItem(email, JSON.stringify(currentUser));
+    const findLoggedInUser = users.find(user => user.email === currentUserEmail);
+
+    if (findLoggedInUser) {
+      findLoggedInUser.isLoggedIn = false;
+      users = users.map((user) =>
+        user.email === currentUserEmail ? findLoggedInUser : user
+      );
+      localStorage.setItem("users", JSON.stringify(users));
     }
     navigate("/home");
   };

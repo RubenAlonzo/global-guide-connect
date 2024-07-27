@@ -11,18 +11,19 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); 
 
-    const userData = localStorage.getItem(email);
-    if (!userData) {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const findUser = users.find((user) => user.email === email);
+
+    if (!findUser) {
       setErrorMessage("This email does not exist");
       setTimeout(() => {
         setErrorMessage("");
-      }, 3000);
-      return;
+      }, 3000);     
+       return;
     }
 
-    const user = JSON.parse(userData);
-
-    if (user.password !== password) {
+    if (findUser.password !== password) {
       setErrorMessage("Incorrect password");
       setTimeout(() => {
         setErrorMessage("");
@@ -30,19 +31,18 @@ const Login = () => {
       return; 
     }
 
-    user.isLoggedIn = true; 
-    localStorage.setItem(email, JSON.stringify(user)); 
-     const allKeys = Object.keys(localStorage);
-     allKeys.forEach((key) => {
-       if (key !== email) {
-         const otherUser = JSON.parse(localStorage.getItem(key));
-         if (otherUser) {
-           otherUser.isLoggedIn = false;
-           localStorage.setItem(key, JSON.stringify(otherUser));
-         }
-       }
-     });
+    users.forEach((user) => {
+      if (user.email !== findUser.email) {
+        user.isLoggedIn = false;
+      } else {
+        findUser.isLoggedIn = true;
+      }
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+
     setErrorMessage(""); 
+
     navigate("/home");
   };
 

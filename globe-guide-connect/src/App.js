@@ -7,7 +7,7 @@ import Header from './components/Header';
 import GuideDetails from './pages/GuideDetails';
 import Register from './pages/Register';
 import Login from './pages/Login';
-import ProtectedRoute from './components/ProtectedRoute';
+//import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
   return (
