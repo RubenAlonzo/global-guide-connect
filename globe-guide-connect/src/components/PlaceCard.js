@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { FaMapMarkerAlt, FaStar, FaEdit, FaTrash } from 'react-icons/fa';
 import { isAuthenticated } from './auth';
+import { Link } from 'react-router-dom';
 
 const PlaceCard = ({ place }) => {
   return (
@@ -33,7 +34,9 @@ const PlaceCard = ({ place }) => {
             </div>
           )}
         </div>
+        <Link to={"/place-details/"+place.id}>
         <Card.Title><strong>{place.name}</strong></Card.Title>
+        </Link>
         <Card.Text className="d-flex align-items-center">
           <FaMapMarkerAlt className="me-2" />
           {place.location}
