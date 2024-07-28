@@ -125,7 +125,6 @@ function FormPlaces() {
 
   return (
     <div>
-      <Header />
       <section className="form-places-section py-5">
         <div className="container">
           <h2 className="mb-4">Add Place</h2>

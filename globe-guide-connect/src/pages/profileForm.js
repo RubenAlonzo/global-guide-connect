@@ -82,7 +82,6 @@ function ProfileForm() {
 
   return (
     <div>
-      <Header />
       <section className="profile-form-section py-5">
         <div className="container">
           <h2 className="mb-4">Profile</h2>
