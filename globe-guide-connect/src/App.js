@@ -7,7 +7,9 @@ import Header from './components/Header';
 import GuideDetails from './pages/GuideDetails';
 import Register from './pages/Register';
 import Login from './pages/Login';
-//import ProtectedRoute from './components/ProtectedRoute';
+import FormPlaces from './pages/FormPlaces';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProfileForm from './pages/profileForm';
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route path='/guide-details/:guideId' element={<GuideDetails/>}/>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/profile-form" element={<ProfileForm />} />
+          <Route path="/places-form" element={<FormPlaces />} />
         </Routes>
     </Router>
   );
