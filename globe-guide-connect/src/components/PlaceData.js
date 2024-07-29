@@ -10,6 +10,15 @@ const placesData = [
     },
     {
         id: 2,
+        name: 'Rome',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/640px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg',
+        rating: 4,
+        location: 'Italy',
+        price: 130,
+        languages: ['Italian', 'English']
+    },
+    {
+        id: 3,
         name: 'New York',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Long_Island_City_New_York_May_2015_panorama_3.jpg/640px-Long_Island_City_New_York_May_2015_panorama_3.jpg',
         rating: 5,
@@ -18,23 +27,14 @@ const placesData = [
         languages: ['English']
     },
     {
-        id: 3,
+        id: 4,
         name: 'Tokyo',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg/640px-Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg',
         rating: 3,
         location: 'Japan',
         price: 100,
         languages: ['Japanese', 'English']
-    },
-    {
-        id: 4,
-        name: 'Rome',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/640px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg',
-        rating: 4,
-        location: 'Italy',
-        price: 130,
-        languages: ['Italian', 'English']
-    },
+    },    
     {
         id: 5,
         name: 'Sydney',

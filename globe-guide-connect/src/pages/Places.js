@@ -5,6 +5,7 @@ import '../components/Guides.css';
 import { placesData } from '../components/PlaceData';
 import CustomButton from '../components/CustomButton';
 import PopularGuides from '../components/PopularGuides';
+import { isAuthenticated } from '../components/auth';
 
 function App() {
     return (
@@ -22,7 +23,9 @@ function App() {
 
                 <section className="d-flex align-items-center mb-3 py-3">
                     <h1 className="mb-2 me-3">Places:</h1>
-                    <CustomButton text="Add" />
+                    {isAuthenticated() && (
+                        <CustomButton text="Add" />
+                    )}
                 </section>
 
                 <section className="mb-5">

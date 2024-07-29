@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { FaMapMarkerAlt, FaStar, FaEdit, FaTrash } from 'react-icons/fa';
+import { isAuthenticated } from './auth';
+import { Link } from 'react-router-dom';
 
 const PlaceCard = ({ place }) => {
   return (
@@ -13,24 +15,28 @@ const PlaceCard = ({ place }) => {
               <FaStar key={index} color={index < place.rating ? '#FFD700' : '#E4E5E9'} />
             ))}
           </div>
-          <div className="position-absolute end-0 m-2 d-flex">
-            <Button
-              variant="outline-warning"
-              className="d-flex align-items-center justify-content-center me-2 rounded-circle"
-              style={{ width: '36px', height: '36px', padding: '0' }}
-            >
-              <FaEdit />
-            </Button>
-            <Button
-              variant="outline-danger"
-              className="d-flex align-items-center justify-content-center rounded-circle"
-              style={{ width: '36px', height: '36px', padding: '0' }}
-            >
-              <FaTrash />
-            </Button>
-          </div>
+          {isAuthenticated() && (
+            <div className="position-absolute end-0 m-2 d-flex">
+              <Button
+                variant="outline-warning"
+                className="d-flex align-items-center justify-content-center me-2 rounded-circle"
+                style={{ width: '36px', height: '36px', padding: '0' }}
+              >
+                <FaEdit />
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="d-flex align-items-center justify-content-center rounded-circle"
+                style={{ width: '36px', height: '36px', padding: '0' }}
+              >
+                <FaTrash />
+              </Button>
+            </div>
+          )}
         </div>
+        <Link to={"/place-details/"+place.id}>
         <Card.Title><strong>{place.name}</strong></Card.Title>
+        </Link>
         <Card.Text className="d-flex align-items-center">
           <FaMapMarkerAlt className="me-2" />
           {place.location}

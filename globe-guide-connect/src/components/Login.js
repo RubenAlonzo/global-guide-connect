@@ -31,15 +31,9 @@ const Login = () => {
       return; 
     }
 
-    users.forEach((user) => {
-      if (user.email !== findUser.email) {
-        user.isLoggedIn = false;
-      } else {
-        findUser.isLoggedIn = true;
-      }
-    });
-
+    findUser.isLoggedIn = true;
     localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("isAuthenticated", "true");
 
     setErrorMessage(""); 
 
